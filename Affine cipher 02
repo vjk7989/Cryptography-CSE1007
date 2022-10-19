@@ -1,4 +1,4 @@
-//Affine cypher using frequency attack 
+//Affine cipher using frequency attack 
 import java.util.*;
 
 class Main{
