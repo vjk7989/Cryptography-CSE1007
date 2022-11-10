@@ -1,0 +1,45 @@
+def shft(s):
+    res = ""
+    for i in range(len(s)-1):
+        res +=s[i+1]
+    res1 = res+s[0]
+    return res1 
+def p(i1,i2):
+    ls1 = []
+    for i in range(len(i1)):
+        ls1.append(i1[i])
+    
+    l2 = []
+    for j in range(len(i2)):
+        l2.append(ls1[i2[j]-1])
+    
+    return l2
+	
+    
+    
+key0 = "1010110111"
+p10 = [3,5,2,7,4,10,1,9,8,6]
+
+key00 = p(key0,p10)
+key = ""
+for i in range(len(key00)):
+    key+= key00[i]
+    
+s1 = key[0:5] #split into 2
+s2 = key[5:]
+
+ss1 = shft(s1) #first shift 
+ss2 = shft(s2)
+
+new_key = ss1+ss2 
+p88 = [6,3,7,4,8,5,10,9]
+print("key 1 : ",p(new_key,p88))
+key1 = p(new_key,p88) 
+
+ss11 = shft(ss1) #second shift 
+ss21 = shft(ss2)
+
+new_key1 = ss11+ss21
+p88 = [6,3,7,4,8,5,10,9]
+print("key 2 : ",p(new_key1,p88))
+key1 = p(new_key1,p88) 
